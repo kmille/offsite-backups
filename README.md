@@ -1,15 +1,15 @@
-### tldr
+### tldr Backup-Automation
 Laptop -> Desktop
-Desktop: mount interne Disk nach /home/kmille/mounts/interne
+Desktop: mount interne Disk nach /home/kmille/mounts/interne  
 Laptop: sudo ./borg-desktop.sh
 
-Laptop -> rsync.net
+Laptop -> rsync.net  
 Laptop: ./borg-offsite.sh
 
-Desktop Daten -> rsync.net
+Desktop Daten -> rsync.net  
 aufm Desktop:  mount interne Disk nach /home/kmille/mounts/interne +  ./borg-to-rsync.net.sh
 
-Desktop => alles auf externe kopieren
+Desktop => alles auf externe kopieren  
 externe Platte anstecken + ./backup-to-external-disk.sh
 
 
