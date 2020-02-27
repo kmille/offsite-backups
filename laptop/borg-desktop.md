@@ -83,3 +83,20 @@ Chunk index:                 1780274              9794520
 ------------------------------------------------------------------------------
 kmille@linbox laptop master % 
 ```
+
+## 2) Restore backup
+```bash
+kmille@linbox laptop master % borg list desktop:/home/kmille/mounts/interne/borg-backup/linbox
+Warning: Attempting to access a previously unknown unencrypted repository!
+Do you want to continue? [yN] y
+2019-07-07_20:14                     Sun, 2019-07-07 20:14:35 [b8314a7f60a226ed319168818df95d96180f2eabd68c1246ba9e4d9b51ad2813]
+2019-10-17_14:15                     Thu, 2019-10-17 14:15:18 [0eb1fdad6f4adcbfd2d6b6c577bd011ceca18ca4eb52b82ee7a1dbddef9140f3]
+2019-11-07_15:40                     Thu, 2019-11-07 15:41:03 [96d405506e88ff95978f3c3534a1af8370613ab3782f2e7ea28e58950f080347]
+2020-01-03_10:16                     Fri, 2020-01-03 10:16:19 [7f1ec97231526fe56f9068d871d571802f65e9dda25805746f62970a459bc434]
+2020-02-23_12:19                     Sun, 2020-02-23 12:19:34 [d1244dd567247fc7d7b824f1b69bda7d1be044d6ba3a858ddbe7a69384f75bb8]
+linbox_2020-02-27_12:06              Thu, 2020-02-27 12:07:00 [1bf62171fc18b0742a74da66076e0f208c9a33a1794040b680235fa1fd35872f]
+linbox_2020-02-27_15:41              Thu, 2020-02-27 15:41:20 [3c9c73e7eefc1e5b6a66162b2363fba31d869a584d13d1078021d34d39e6ce56]
+kmille@linbox laptop master % borg mount desktop:/home/kmille/mounts/interne/borg-backup/linbox::linbox_2020-02-27_12:06 /home/kmille/mnt
+kmille@linbox laptop master % fusermount -u /home/kmille/mnt
+kmille@linbox laptop master %
+```
