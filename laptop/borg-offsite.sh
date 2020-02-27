@@ -23,4 +23,4 @@ sudo borg create -v -C lz4                      \
 #DRY_RUN=""
 DRY_RUN="--dry-run" 
 
-#borg prune $REPOSITORY $DRY_RUN -v --list --keep-last 5
+#sudo borg prune $REPOSITORY $DRY_RUN -v --list --keep-last 5
