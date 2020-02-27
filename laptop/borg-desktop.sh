@@ -1,5 +1,5 @@
 #!/bin/sh -eu
-REPOSITORY=homebox:/home/kmille/data/borg-backup/linbox
+REPOSITORY=desktop:/home/kmille/mounts/interne/borg-backup/linbox
 DATE=`date +%Y-%m-%d_%H:%M`
 
 sudo borg create -v -C lz4                      \

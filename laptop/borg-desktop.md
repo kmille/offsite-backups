@@ -1,7 +1,8 @@
-# How to backup: Laptop => Desktop
+# How to make a backup: Laptop => Desktop
 
-# Unlock boot disk of Desktop with ssh
+## 1) Unlock boot disk of Desktop with ssh
 
+```bash
 kmille@linbox scripts% ssh desktop-boot
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
@@ -26,11 +27,11 @@ Host desktop-boot
     User root
     StrictHostKeyChecking no
     IdentityFile ~/.ssh/desktop
+```
 
 
-# Unlock boot disk of Desktop with ssh
-
-
+## 2) Unlock boot disk of Desktop with ssh
+```bash
 kmille@linbox scripts% ssh desktop     
 Last login: Thu Feb 27 14:53:26 2020 from 192.168.10.70
 kmille@homebox scripts master % cd desktop                                      
@@ -55,5 +56,30 @@ Host desktop
     HostName 192.168.10.80
     User kmille
     IdentityFile ~/.ssh/desktop
+```
 
 
+## 3) Let's do the backup
+```bash
+kmille@linbox laptop master % sudo ./borg-desktop.sh
+Warning: The repository at location ssh://desktop/home/kmille/mounts/interne/borg-backup/linbox was previously located at ssh://homebox/home/kmille/data/borg-backup/linbox
+Do you want to continue? [yN] y
+Creating archive at "desktop:/home/kmille/mounts/interne/borg-backup/linbox::linbox_2020-02-27_15:41"
+------------------------------------------------------------------------------                            
+Archive name: linbox_2020-02-27_15:41                                                                     
+Archive fingerprint: 3c9c73e7eefc1e5b6a66162b2363fba31d869a584d13d1078021d34d39e6ce56
+Time (start): Thu, 2020-02-27 15:41:20
+Time (end):   Thu, 2020-02-27 15:44:36
+Duration: 3 minutes 16.30 seconds
+Number of files: 1234731
+Utilization of max. archive size: 0%
+------------------------------------------------------------------------------
+                       Original size      Compressed size    Deduplicated size
+This archive:              152.46 GB            102.76 GB            170.36 MB
+All archives:                1.20 TB            814.37 GB            178.15 GB
+
+                       Unique chunks         Total chunks
+Chunk index:                 1780274              9794520
+------------------------------------------------------------------------------
+kmille@linbox laptop master % 
+```
