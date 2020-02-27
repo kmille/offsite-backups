@@ -1,7 +1,7 @@
 ### tldr Backup-Automation
-Laptop -> Desktop
+Laptop -> Desktop  
 Desktop: mount interne Disk nach /home/kmille/mounts/interne  
-Laptop: sudo ./borg-desktop.sh
+Laptop: ./borg-desktop.sh
 
 Laptop -> rsync.net  
 Laptop: ./borg-offsite.sh
