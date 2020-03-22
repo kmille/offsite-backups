@@ -58,7 +58,6 @@ Host rsync.net ch-s012.rsync.net
     Hostname ch-s012.rsync.net
     User <redacted>
     ForwardAgent no
-    IdentityFile /root/.ssh/rsync.net
     IdentityFile /home/kmille/.ssh/desktop
 
 Host prio.ch-s012.rsync.net
