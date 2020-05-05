@@ -6,7 +6,7 @@ DATE=`date +%Y-%m-%d_%H:%M`
 borg create -v -C lz4                            \
     $REPOSITORY::desktop_data_$DATE              \
     /home/kmille/mounts/interne/Bürokratie       \
-    /home/kmille/mounts/interneBilderVideos      \
+    /home/kmille/mounts/interne/BilderVideos     \
     --progress                                   \
     --verbose                                    \
     --stats

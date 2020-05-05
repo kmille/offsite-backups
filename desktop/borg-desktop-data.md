@@ -44,7 +44,6 @@ Merging into master chunks index ...
 Fetching and building archive index for linbox_2020-02-27_15:59 ...59
 Merging into master chunks index ...
 Done.
-/home/kmille/mounts/interneBilderVideos: [Errno 2] No such file or directory: '/home/kmille/mounts/interneBilderVideos'sicherung/2017/Versicherungsnummer4.pdf
 Remote: Borg 0.29.0: exception in RPC call:
 Remote: Traceback (most recent call last):
 Remote:   File "/usr/home/kibab/borgbackup-0.29.0/borg/remote.py", line 91, in serve

@@ -21,3 +21,5 @@ then
 else
     sudo mount /dev/vg1/data /home/kmille/mounts/interne
 fi
+
+lsblk
